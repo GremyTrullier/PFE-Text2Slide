@@ -1,0 +1,137 @@
+{
+  "presentation_name": "example.pptx",
+  "presentation_content": [
+    {
+      "type": "title_slide",
+      "content": [
+        {
+          "type": "title0",
+          "content": [
+            "Document title"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam ipsum, aliquam sit amet tempor sed, sodales vitae tellus. Fusce vitae lobortis quam. Proin laoreet efficitur ligula, laoreet congue neque condimentum a"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "title_and_content_slide",
+      "content": [
+        {
+          "type": "title1",
+          "content": [
+            "Part 1"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam ipsum, aliquam sit amet tempor sed."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "title_and_content_slide",
+      "content": [
+        {
+          "type": "title2",
+          "content": [
+            "Part 1-1"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam ipsum, aliquam sit amet tempor sed, sodales vitae tellus.",
+            "Nulla odio nibh, aliquam sit amet eros a, vehicula eleifend tortor. Sed interdum tellus eu convallis pretium. Proin euismod felis id tortor semper, vel vehicula quam dapibus."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "title_and_content_slide",
+      "content": [
+        {
+          "type": "title2",
+          "content": [
+            "Part 1-2"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam ipsum, aliquam sit amet tempor sed, sodales vitae tellus.",
+            "Nulla odio nibh, aliquam sit amet eros a, vehicula eleifend tortor."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section_header",
+      "content": [
+        {
+          "type": "title1",
+          "content": [
+            "Part 2"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "title_and_content_slide",
+      "content": [
+        {
+          "type": "title2",
+          "content": [
+            "Part 2-1"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam ipsum, aliquam sit amet tempor sed, sodales vitae tellus."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "title_and_content_slide",
+      "content": [
+        {
+          "type": "title2",
+          "content": [
+            "Part 2-2"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam ipsum, aliquam sit amet tempor sed, sodales vitae tellus. Nulla odio nibh, aliquam sit amet eros a, vehicula eleifend tortor."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "title_and_content_slide",
+      "content": [
+        {
+          "type": "title3",
+          "content": [
+            "Part 2-2-1"
+          ]
+        },
+        {
+          "type": "text",
+          "content": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        }
+      ]
+    }
+  ]
+}
