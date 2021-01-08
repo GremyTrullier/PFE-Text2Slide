@@ -17,9 +17,8 @@ import os
 # Préparer le chromedriver
 path = "C:\\Users\\sdael\\Documents\\Cours\\M2\\PFE\\"
 options = webdriver.ChromeOptions()
-#options.add_argument('headless')
-driver = webdriver.Chrome(path+'chromedriver.exe', chrome_options=options)
-driver.set_window_position(10000, 0) # Pour cacher la fenêtre (on la voit quand même quelques secondes)
+driver = webdriver.Chrome(path+'chromedriver.exe', options=options)
+driver.set_window_position(-10000, 0) # Pour cacher la fenêtre (on la voit quand même quelques secondes)
 
 # Préparer le répertoire d'enregistrement des images.
 save_directory = 'Images\\'
