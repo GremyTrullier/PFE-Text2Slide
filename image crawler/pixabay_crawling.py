@@ -15,7 +15,7 @@ import os
 
 """ Préparation """
 # Préparer le chromedriver
-path = "C:\\Users\\sdael\\Documents\\Cours\\M2\\PFE\\"
+path = "C:\\Users\\Gremy Trullier\\OneDrive - Efrei\\EFREI\\Cours\\M2\\PFE\\image crawler\\"
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(path+'chromedriver.exe', options=options)
 driver.set_window_position(-10000, 0) # Pour cacher la fenêtre (on la voit quand même quelques secondes)
