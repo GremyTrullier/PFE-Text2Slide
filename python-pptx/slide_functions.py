@@ -31,7 +31,7 @@ def create_title_slide(slide_content, pres):
     ['level_0',
         'title_0',
         'My super title',
-        'subtitle',
+        'plain_text',
         'My subtitle'
     ]
     """
@@ -53,7 +53,7 @@ def create_title_slide(slide_content, pres):
                 print("This slide has no title placeholder.")
                 
         # logically, the rest of the slide should be a subtitle
-        elif ("subtitle" in content):
+        elif ("plain_text" in content):
             try:
                 print(content, slide_content[i+1])
                 slide.placeholders[1].text = "\n".join(slide_content[i+1:])
