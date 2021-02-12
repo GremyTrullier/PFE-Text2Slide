@@ -11,7 +11,7 @@
 					]
 				},
 				{
-					"type" : "subtitle",
+					"type" : "plain_text",
 					"content" : [
 						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam ipsum, aliquam sit amet tempor sed, sodales vitae tellus. Fusce vitae lobortis quam. Proin laoreet efficitur ligula, laoreet congue neque condimentum a"
 					]
