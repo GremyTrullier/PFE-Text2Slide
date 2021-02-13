@@ -7,7 +7,7 @@ def replace_sentence(input_file, output_file, isentence, osentence):
         - isentence: sentence you want to remove from the file
         - osentence: sentence you want to add to the file
     """
-    with open(input_file, "r", encoding = "utf-8") as ifile:
+    with open(input_file, "r") as ifile:
         fcontent = ifile.read()
 
     lines = fcontent.split("\n")
@@ -23,6 +23,6 @@ def replace_sentence(input_file, output_file, isentence, osentence):
             
     fcontent = "\n".join(lines)
 
-    with open(output_file, "w", encoding = "utf-8") as ofile:
+    with open(output_file, "w") as ofile:
         ofile.write(fcontent)
         ofile.flush()
