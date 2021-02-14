@@ -1,0 +1,220 @@
+{
+  "document_name": "The Lego Group.json",
+  "document_content": [
+    {
+      "type": "level_0",
+      "content": [
+        {
+          "type": "title_0",
+          "content": [ "The Lego Group" ]
+        },
+        {
+          "type": "level_1",
+          "content": [
+            {
+              "type": "title_1",
+              "content": [ "Introduction" ]
+            },
+            {
+              "type": "level_2",
+              "content": [
+                {
+                  "type": "title_2",
+                  "content": [ "General information" ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " It is best known for the manufacture of Lego-brand toys, consisting mostly of interlocking plastic bricks." ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " The name Lego is derived from the Danish words leg godt, meaning 'play well'. Niels B. Christiansen is the company's CEO, having assumed the position on 1 October 2017." ]
+                }
+              ]
+            },
+            {
+              "type": "level_2",
+              "content": [
+                {
+                  "type": "title_2",
+                  "content": [ "History" ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " The history of Lego spans nearly 100 years, beginning with the creation of small wooden playthings during the early 20th century." ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ "     In North America, Samsonite managed the Lego brand from 1961 until 1972 (United States) and 1986 (Canada)." ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "level_1",
+          "content": [
+            {
+              "type": "title_1",
+              "content": [ "Legoland" ]
+            },
+            {
+              "type": "level_2",
+              "content": [
+                {
+                  "type": "title_2",
+                  "content": [ "Amusement parks" ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " The Lego Group has built eight amusement parks around the world, each known as Legoland. The first Legoland park was built in Lego's hometown of Billund in Denmark. This was followed by Legoland Windsor in England, Legoland California in Carlsbad, US and Legoland Deutschland in Günzburg, Germany. In addition, Legoland Sierksdorf was opened in 1973, but soon closed in 1976." ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " In July 2005, the Lego Group announced that it had reached a deal with private investment company the Blackstone Group to sell all four parks for €375m to the Blackstone subsidiary Merlin Entertainments. Under the terms of the deal, The Lego Group would take a 30% share in Merlin Entertainments and positions on their board." ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " In 2010, Merlin Entertainments opened the first Legoland water park at the Legoland California site. On 15 October 2011, Merlin Entertainments opened their first new Legoland park, Legoland Florida, in Winter Haven, Florida. It is the largest Legoland opened to date at 145 acres, and also only one of the Legoland parks opened in the United States." ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " It is the first Legoland in Asia and was quickly followed by another Lego-themed water park in the same area. The first Lego hotel has also opened near the site. People who stay in the hotel will also get tickets to the theme park and water park." ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " Merlin Entertainments has also planned several new Legoland parks: Legoland Dubai, Legoland Nagoya (scheduled to open in 2015), and Legoland Korea (also scheduled to open in 2015)." ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "level_1",
+          "content": [
+            {
+              "type": "title_1",
+              "content": [ "Retail stores" ]
+            },
+            {
+              "type": "plain_text",
+              "content": [ "     The Lego Group operates 146 retail stores (83 in the United States, 17 in the United Kingdom, 11 in Germany, 10 in Canada, 7 in France, 2 in Spain, 2 in Austria, 2 in Italy, 2 in Serbia, 2 in Denmark, 1 in Belgium, 2 in China, 1 in Sweden, 1 in Poland, 1 in India, 1 in Lithuania and 3 in Mexico.). The Lego Group also franchised its store brand to Majid Al Futtaim Group, which opened 6 stores in 2015 (4 in the United Arab Emirates, and 2 in Kuwait)." ]
+            },
+            {
+              "type": "level_2",
+              "content": [
+                {
+                  "type": "title_2",
+                  "content": [ "Europe" ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " October 2002 saw a significant change in The Lego Group's direct retail policy with the opening of the first so-called Lego Brand Store in Cologne, Germany. The second, in Milton Keynes, UK, followed quickly – several dozen more opened worldwide over the next few years, and most of the existing stores have been remodelled on the new Brand Store template. The opening of most of these stores, including the 2003 opening of one in the Birmingham Bull Ring shopping centre in England, have been marked by the production of a new, special, limited edition, commemorative Lego Duplo piece. Lego opened the first brand store in its home country Denmark in Copenhagen on 13 December 2010. In 2016, three stores opened in Italy: one in Milan, one in the shopping center near the Orio al Serio International Airport in Bergamo, and another in Verona. In 2020, the total amount of Lego stores in Italy reached 14, covering from North to South." ]
+                }
+              ]
+            },
+            {
+              "type": "level_2",
+              "content": [
+                {
+                  "type": "title_2",
+                  "content": [ "North America" ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " The store inventory includes a large selection of Lego sets for sale, including sets which are advertised in Lego catalogues as 'Not Available in Any Store'. Between 1999 and 2005, Lego opened 24 further stores in North America in 23 states. As of 2016, there are 90 Lego stores operating or soon-to-be operating in North America in 32 US states and five Canadian provinces. These stores sell various Lego merchandise, including minifigures, Pick-a-Brick, and custom packaged minifigures." ]
+                }
+              ]
+            },
+            {
+              "type": "level_2",
+              "content": [
+                {
+                  "type": "title_2",
+                  "content": [ "India" ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ "     The first Lego store in India was opened in Chennai, Tamil Nadu in March 2014 by Funskool, under licence from the Lego Group." ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "level_1",
+          "content": [
+            {
+              "type": "title_1",
+              "content": [ "Toy production" ]
+            },
+            {
+              "type": "plain_text",
+              "content": [ "     Lego products are mass-produced, packaged, and shipped on a large scale." ]
+            },
+            {
+              "type": "plain_text",
+              "content": [ " Lego Produktion AG was a major production facility for Lego. The Baar facility eventually closed in 2004." ]
+            },
+            {
+              "type": "plain_text",
+              "content": [ "     In April 1962, the Lego Group began producing miniature tires; it became the largest tire manufacturing company in 2011, when it produced 381 million tires that year." ]
+            }
+          ]
+        },
+        {
+          "type": "level_1",
+          "content": [
+            {
+              "type": "title_1",
+              "content": [ "Environmental issues" ]
+            },
+            {
+              "type": "level_2",
+              "content": [
+                {
+                  "type": "title_2",
+                  "content": [ "Sustainable alternatives" ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " Lego acknowledges the impact of its operations on the environment, in particular in areas such as climate change, resource and energy use and waste. It is seeking alternatives to crude oil as the raw material for its bricks. This results in the establishment in June 2015 the Lego Sustainable Materials Centre, which is expected to recruit more than 100 employees, as a significant step towards the 2030 ambition of finding and implementing sustainable alternatives to current materials." ]
+                }
+              ]
+            },
+            {
+              "type": "level_2",
+              "content": [
+                {
+                  "type": "title_2",
+                  "content": [ "Greenpeace" ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " The environmental group had accused Lego, Hasbro, Mattel and Disney of using packaging material sourced from trees cleared out of the Indonesian rainforest." ]
+                }
+              ]
+            },
+            {
+              "type": "level_2",
+              "content": [
+                {
+                  "type": "title_2",
+                  "content": [ "Shell" ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " Lego partnered with the oil company Royal Dutch Shell in the 1960s, using the company's logo in some of its construction sets. Lego announced that when the latest contract between the two companies comes to an end it will not be renewing it." ]
+                },
+                {
+                  "type": "plain_text",
+                  "content": [ " As of August 2014, more than 750,000 people worldwide had signed a Greenpeace petition asking Lego to end its partnership with Shell. Greenpeace claimed the decision was in response to its campaigning." ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
