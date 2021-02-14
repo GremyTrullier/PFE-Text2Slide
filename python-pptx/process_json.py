@@ -46,3 +46,29 @@ def build_slide_content(slide_elements):
     slide_contents.append(sub_list)
         
     return slide_contents[1:]
+
+def retrieve_content(list_slides):
+    """
+    Retrieves titles and plain texts from slide elements (can get them with breakdown_json)
+    Parameters:
+        - list_slides : list of data in json format
+    """
+    keywords = ['level_', 'title_', 'subtitle', 'header']
+    doc_content = []
+    sublist = []
+    filling = False
+    for content in list_slides:
+        r = [content for keyword in keywords if keyword in content]
+        if len(r)==0:
+            if content == 'plain_text':
+                doc_content.append(sublist)
+                sublist = []
+                filling = True
+            elif filling == True:
+                sublist.append(content)
+        elif len(r)>0:
+            filling = False
+    if len(sublist) != 0:
+        doc_content.append(sublist)
+        
+    return doc_content[1:]
