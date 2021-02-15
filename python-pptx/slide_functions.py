@@ -42,7 +42,7 @@ def create_title_slide(slide_content, pres):
         # set the title
         if ('title_' in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 title = slide.shapes.title
                 title.text = slide_content[i+1]
             except IndexError:
@@ -51,11 +51,12 @@ def create_title_slide(slide_content, pres):
                     print(content)
             except:
                 print("This slide has no title placeholder.")
+                print(f"Could not write {content} into the presentation")
                 
         # logically, the rest of the slide should be a subtitle
         elif ("plain_text" in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 slide.placeholders[1].text = "\n".join(slide_content[i+1:])
             except IndexError:
                 print('The text is empty. Check the slide content.')
@@ -63,6 +64,7 @@ def create_title_slide(slide_content, pres):
                     print(content)
             except:
                 print("This slide has no such placeholder.")
+                print(f"Could not write {content} into the presentation")
             
     return pres
 
@@ -79,12 +81,12 @@ def create_section_header_slide(slide_content, pres):
     """
     slide_layout = pres.slide_layouts[DefaultSlideLayouts['SECTION_HEADER'].value]
     slide = pres.slides.add_slide(slide_layout)
-    
+    plain_text = []
     for i, content in enumerate(slide_content):
         # set the title
         if ('title_' in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 title = slide.shapes.title
                 title.text = slide_content[i+1]
             except IndexError:
@@ -93,19 +95,23 @@ def create_section_header_slide(slide_content, pres):
                     print(content)
             except:
                 print("This slide has no title placeholder.")
+                print(f"Could not write {content} into the presentation")
         
         # logically, the rest of the slide should be subheader
-        elif ("plain_text" in content):
+        elif ("plain_text" in content): 
             try:
-                print(content, slide_content[i+1])
-                slide.placeholders[1].text = "\n".join(slide_content[i+1:])
+                #print(content, slide_content[i+1])
+                plain_text.append(slide_content[i+1])
             except IndexError:
                 print('The text is empty. Check the slide content.')
                 for content in slide_content:
                     print(content)
-            except:
-                print("This slide has no such placeholder.")
-            
+    try:
+        text = "\n".join("".join(plain_text).split('. '))
+        slide.placeholders[1].text = text
+    except:
+            print("This slide has no such placeholder.")
+            print(f"Could not write {text} into the presentation")
     return pres
 
 def create_title_and_content_slide(slide_content, pres):
@@ -123,12 +129,12 @@ def create_title_and_content_slide(slide_content, pres):
     """
     slide_layout = pres.slide_layouts[DefaultSlideLayouts['TITLE_AND_CONTENT_SLIDE'].value]
     slide = pres.slides.add_slide(slide_layout)
-    
+    plain_text = []
     for i, content in enumerate(slide_content):
         # set the title
         if ('title_' in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 title = slide.shapes.title
                 title.text = slide_content[i+1]
             except IndexError:
@@ -137,18 +143,23 @@ def create_title_and_content_slide(slide_content, pres):
                     print(content)
             except:
                 print("This slide has no title placeholder.")
+                print(f"Could not write {content} into the presentation")
         
         # logically, the rest of the slide should be the content (usually plain text)
-        elif ("plain_text" in content):
+        elif ("plain_text" in content): 
             try:
-                print(content, slide_content[i+1])
-                slide.placeholders[1].text = "\n".join(slide_content[i+1:])
+                #print(content, slide_content[i+1])
+                plain_text.append(slide_content[i+1])
             except IndexError:
                 print('The text is empty. Check the slide content.')
                 for content in slide_content:
                     print(content)
-            except:
-                print("This slide has no such placeholder.")
+    try:
+        text = "\n".join("".join(plain_text).split('. '))
+        slide.placeholders[1].text = text
+    except:
+            print("This slide has no such placeholder.")
+            print(f"Could not write {text} into the presentation")
             
     return pres
 
@@ -175,7 +186,7 @@ def create_two_content_slide(slide_content, pres):
         # set the title
         if ('title_' in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 title = slide.shapes.title
                 title.text = slide_content[i+1]
             except IndexError:
@@ -184,6 +195,7 @@ def create_two_content_slide(slide_content, pres):
                     print(content)
             except:
                 print("This slide has no title placeholder.")
+                print(f"Could not write {content} into the presentation")
         
         # logically, the rest of the slide should be plain text (here two contents)
         elif ("plain_text" in content):
@@ -192,7 +204,7 @@ def create_two_content_slide(slide_content, pres):
                 # first content
                 try:
                     end_of_text = slide_content.index("plain_text_2")
-                    print(content, slide_content[i+1:end_of_text])
+                    #print(content, slide_content[i+1:end_of_text])
                     slide.placeholders[1].text = "\n".join(slide_content[i+1:end_of_text])
                 except IndexError:
                     print('The text is empty. Check the slide content.')
@@ -200,10 +212,11 @@ def create_two_content_slide(slide_content, pres):
                         print(content)
                 except:
                     print("This slide has no such placeholder.")
+                    print(f"Could not write {content} into the presentation")
             else:
                 # second content
                 try:
-                    print(content, slide_content[i+1:])
+                    #print(content, slide_content[i+1:])
                     slide.placeholders[2].text = "\n".join(slide_content[i+1:])
                 except IndexError:
                     print('The text is empty. Check the slide content.')
@@ -211,6 +224,7 @@ def create_two_content_slide(slide_content, pres):
                         print(content)
                 except:
                     print("This slide has no such placeholder.")
+                    print(f"Could not write {content} into the presentation")
             
     return pres
 
@@ -242,7 +256,7 @@ def create_comparison_slide(slide_content, pres):
         # set the title
         if ('title_' in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 title = slide.shapes.title
                 title.text = slide_content[i+1]
             except IndexError:
@@ -251,6 +265,7 @@ def create_comparison_slide(slide_content, pres):
                     print(content)
             except:
                 print("This slide has no title placeholder.")
+                print(f"Could not write {content} into the presentation")
         
         # the two subtitles
         elif ("header" in content):
@@ -258,7 +273,7 @@ def create_comparison_slide(slide_content, pres):
                 visited = False
                 # second subtitle
                 try:
-                    print(content, slide_content[i+1])
+                    #print(content, slide_content[i+1])
                     slide.placeholders[3].text = slide_content[i+1]
                 except IndexError:
                     print('The text is empty. Check the slide content.')
@@ -266,11 +281,12 @@ def create_comparison_slide(slide_content, pres):
                         print(content)
                 except:
                     print("This slide has no such placeholder.")
+                    print(f"Could not write {content} into the presentation")
             else:
                 visited = True
                 # first subtitle
                 try:
-                    print(content, slide_content[i+1])
+                    #print(content, slide_content[i+1])
                     slide.placeholders[1].text = slide_content[i+1]
                 except IndexError:
                     print('The text is empty. Check the slide content.')
@@ -278,6 +294,7 @@ def create_comparison_slide(slide_content, pres):
                         print(content)
                 except:
                     print("This slide has no such placeholder.")
+                    print(f"Could not write {content} into the presentation")
             
         # logically, the rest of the slide should be plain text (here two contents)
         elif ("plain_text" in content):
@@ -285,7 +302,7 @@ def create_comparison_slide(slide_content, pres):
                 # first content
                 try:
                     end_of_text = slide_content.index("header_2")
-                    print(content, slide_content[i+1:end_of_text])
+                    #print(content, slide_content[i+1:end_of_text])
                     slide.placeholders[2].text = "\n".join(slide_content[i+1:end_of_text])
                 except IndexError:
                     print('The text is empty. Check the slide content.')
@@ -293,10 +310,11 @@ def create_comparison_slide(slide_content, pres):
                         print(content)
                 except:
                     print("This slide has no such placeholder.")
+                    print(f"Could not write {content} into the presentation")
             else:
                 # second content
                 try:
-                    print(content, slide_content[i+1:])
+                    #print(content, slide_content[i+1:])
                     slide.placeholders[4].text = "\n".join(slide_content[i+1:])
                 except IndexError:
                     print('The text is empty. Check the slide content.')
@@ -304,6 +322,7 @@ def create_comparison_slide(slide_content, pres):
                         print(content)
                 except:
                     print("This slide has no such placeholder.")
+                    print(f"Could not write {content} into the presentation")
             
     return pres
 
@@ -323,7 +342,7 @@ def create_title_only_slide(slide_content, pres):
         # set the title
         if ('title_' in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 title = slide.shapes.title
                 title.text = slide_content[i+1]
             except IndexError:
@@ -332,6 +351,7 @@ def create_title_only_slide(slide_content, pres):
                     print(content)
             except:
                 print("This slide has no title placeholder.")
+                print(f"Could not write {content} into the presentation")
     
     return pres
 
@@ -350,12 +370,12 @@ def create_content_with_caption_slide(slide_content, pres):
     """
     slide_layout = pres.slide_layouts[DefaultSlideLayouts['CONTENT_WITH_CAPTION'].value]
     slide = pres.slides.add_slide(slide_layout)
-
+    plain_text = []
     for i, content in enumerate(slide_content):
         # set the title
         if ('title_' in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 title = slide.shapes.title
                 title.text = slide_content[i+1]
             except IndexError:
@@ -364,13 +384,14 @@ def create_content_with_caption_slide(slide_content, pres):
                     print(content)
             except:
                 print("This slide has no title placeholder.")
+                print(f"Could not write {content} into the presentation")
                 
         # set the content
         elif ("content_item" in content):         
             # picture or plain text only for now
             # charts, tables and stuff coming later
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 picture = slide.placeholders[1].insert_picture(slide_content[i+1])
             except IndexError:
                 print('The picture is empty. Check the slide content.')
@@ -381,18 +402,23 @@ def create_content_with_caption_slide(slide_content, pres):
                 picture = slide.placeholders[1].insert_picture(imgspath+'default_picture.jpg')
             except:
                 print("This slide has no such placeholder.")
+                print(f"Could not write {content} into the presentation")
                 
         # logically, the rest of the slide should be plain text
-        elif ("plain_text" in content):
+        elif ("plain_text" in content): 
             try:
-                print(content, slide_content[i+1])
-                slide.placeholders[2].text = "\n".join(slide_content[i+1:])
+                #print(content, slide_content[i+1])
+                plain_text.append(slide_content[i+1])
             except IndexError:
                 print('The text is empty. Check the slide content.')
                 for content in slide_content:
                     print(content)
-            except:
-                print("This slide has no such placeholder.")
+    try:
+        text = "\n".join("".join(plain_text).split('. '))
+        slide.placeholders[1].text = text
+    except:
+            print("This slide has no such placeholder.")
+            print(f"Could not write {text} into the presentation")
             
     return pres
 
@@ -411,12 +437,12 @@ def create_picture_with_caption_slide(slide_content, pres, imgspath):
     """
     slide_layout = pres.slide_layouts[DefaultSlideLayouts['PICTURE_WITH_CAPTION'].value]
     slide = pres.slides.add_slide(slide_layout)
-    
+    plain_text = []
     for i, content in enumerate(slide_content):
         # set the title
         if ('title_' in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 title = slide.shapes.title
                 title.text = slide_content[i+1]
             except IndexError:
@@ -425,11 +451,12 @@ def create_picture_with_caption_slide(slide_content, pres, imgspath):
                     print(content)
             except:
                 print("This slide has no title placeholder.")
+                print(f"Could not write {content} into the presentation")
                 
         # set the picture
         elif ("picture_item" in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 picture = slide.placeholders[1].insert_picture(slide_content[i+1])
             except IndexError:
                 print('The picture is empty. Check the slide content.')
@@ -440,18 +467,23 @@ def create_picture_with_caption_slide(slide_content, pres, imgspath):
                 picture = slide.placeholders[1].insert_picture(imgspath+'default_picture.jpg')
             except:
                 print("This slide has no such placeholder.")
+                print(f"Could not write {content} into the presentation")
                 
         # logically, the rest of the slide should be plain text
-        elif ("plain_text" in content):
+        elif ("plain_text" in content): 
             try:
-                print(content, slide_content[i+1])
-                slide.placeholders[2].text = "\n".join(slide_content[i+1:])
+                #print(content, slide_content[i+1])
+                plain_text.append(slide_content[i+1])
             except IndexError:
                 print('The text is empty. Check the slide content.')
                 for content in slide_content:
                     print(content)
-            except:
-                print("This slide has no such placeholder.")
+    try:
+        text = "\n".join("".join(plain_text).split('. '))
+        slide.placeholders[1].text = text
+    except:
+            print("This slide has no such placeholder.")
+            print(f"Could not write {text} into the presentation")
             
     return pres
 
@@ -462,12 +494,12 @@ def create_title_and_vertical_text_slide(slide_content, pres):
     """
     slide_layout = pres.slide_layouts[DefaultSlideLayouts['TITLE_AND_VERTICAL_TEXT'].value]
     slide = pres.slides.add_slide(slide_layout)
-    
+    plain_text = []
     for i, content in enumerate(slide_content):
         # set the title
         if ('title_' in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 title = slide.shapes.title
                 title.text = slide_content[i+1]
             except IndexError:
@@ -476,18 +508,23 @@ def create_title_and_vertical_text_slide(slide_content, pres):
                     print(content)
             except:
                 print("This slide has no title placeholder.")
+                print(f"Could not write {content} into the presentation")
         
         # logically, the rest of the slide should be plain text
-        elif ("plain_text" in content):
+        elif ("plain_text" in content): 
             try:
-                print(content, slide_content[i+1])
-                slide.placeholders[1].text = "\n".join(slide_content[i+1:])
+                #print(content, slide_content[i+1])
+                plain_text.append(slide_content[i+1])
             except IndexError:
                 print('The text is empty. Check the slide content.')
                 for content in slide_content:
                     print(content)
-            except:
-                print("This slide has no such placeholder.")
+    try:
+        text = "\n".join("".join(plain_text).split('. '))
+        slide.placeholders[1].text = text
+    except:
+            print("This slide has no such placeholder.")
+            print(f"Could not write {text} into the presentation")
             
     return pres
 
@@ -498,12 +535,12 @@ def create_vertical_title_and_text_slide(slide_content, pres):
     """
     slide_layout = pres.slide_layouts[DefaultSlideLayouts['VERTICAL_TITLE_AND_TEXT'].value]
     slide = pres.slides.add_slide(slide_layout)
-    
+    plain_text = []
     for i, content in enumerate(slide_content):
         # set the title
         if ('title_' in content):
             try:
-                print(content, slide_content[i+1])
+                #print(content, slide_content[i+1])
                 title = slide.shapes.title
                 title.text = slide_content[i+1]
             except IndexError:
@@ -512,18 +549,23 @@ def create_vertical_title_and_text_slide(slide_content, pres):
                     print(content)
             except:
                 print("This slide has no title placeholder.")
+                print(f"Could not write {content} into the presentation")
         
         # logically, the rest of the slide should be plain text
-        elif ("plain_text" in content):
+        elif ("plain_text" in content): 
             try:
-                print(content, slide_content[i+1])
-                slide.placeholders[1].text = "\n".join(slide_content[i+1:])
+                #print(content, slide_content[i+1])
+                plain_text.append(slide_content[i+1])
             except IndexError:
                 print('The text is empty. Check the slide content.')
                 for content in slide_content:
                     print(content)
-            except:
-                print("This slide has no such placeholder.")
+    try:
+        text = "\n".join("".join(plain_text).split('. '))
+        slide.placeholders[1].text = text
+    except:
+            print("This slide has no such placeholder.")
+            print(f"Could not write {text} into the presentation")
             
     return pres
 
