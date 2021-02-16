@@ -16,8 +16,14 @@ Groupe PFE 20160368
 
 Aims to use machine learning (text understanding and abstract) to generate PowerPoint presentations from Word documents.
 
+# HOW TO USE
 
+Run `pip install -r requirements.txt` to install the necessary libraries.
 
-Branch word : producing a summary of a Word document
-
-Branch ppt : producing a PowerPoint presentation using a summary
+Run the main.py script in the app folder.
+Our application window will pop up.
+You can choose the **.docx** you want to convert to **.pptx**
+You can also choose the method used to summarize the content of your file:  
+- Key Concepts: exxtract the main concept of each paragraph
+- Key Sentence: exxtract the main sentence of each paragraph
+- Key Words: exxtract the most relevant word of each paragraph
