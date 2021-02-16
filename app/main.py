@@ -41,7 +41,7 @@ class Application(tk.Frame):
 
     def choose_file(self):
         self.file_path = tkf.askopenfilename(
-            parent=self.master, initialdir='C:\\Users\\bixen\\Desktop\\Test',
+            parent=self.master, initialdir='C:',
             title='Choose file',
             filetypes=[('Word Documents', '.docx')])
         self.input_file_label['text'] = self.file_path
